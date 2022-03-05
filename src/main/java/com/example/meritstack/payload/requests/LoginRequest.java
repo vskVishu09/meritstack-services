@@ -1,4 +1,4 @@
-package com.example.meritstack.payload;
+package com.example.meritstack.payload.requests;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -7,14 +7,14 @@ import javax.validation.constraints.NotBlank;
  * Created by rajeevkumarsingh on 02/08/17.
  */
 public class LoginRequest {
-    @NotBlank
-    @Email
+    @NotBlank(message = "Email should not be blank")
+    @Email(message = "Email is not Valid")
     private String email;
 
-    @NotBlank
+    @NotBlank(message = "Password should not be blank")
     private String password;
 
-    @NotBlank
+    @NotBlank(message = "Usertype should not be blank")
     private String type;
 
     public String getEmail() {

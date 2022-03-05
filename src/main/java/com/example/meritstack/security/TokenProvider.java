@@ -1,7 +1,6 @@
 package com.example.meritstack.security;
 
 import com.example.meritstack.config.AppProperties;
-import com.example.meritstack.payload.LoginRequest;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

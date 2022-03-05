@@ -1,4 +1,4 @@
-package com.example.meritstack.payload;
+package com.example.meritstack.payload.responses;
 
 public class ApiResponse {
     private boolean success;

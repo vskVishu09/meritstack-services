@@ -1,4 +1,4 @@
-package com.example.meritstack.payload;
+package com.example.meritstack.payload.responses;
 
 public class AuthResponse {
     private String accessToken;
