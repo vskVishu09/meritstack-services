@@ -1,0 +1,6 @@
+1. configured your database username/password in application.yml file.
+2. use below command to run service.
+
+----------------------------------------------------------------------------------------------------
+java -jar meritstack-services-0.0.1-SNAPSHOT.jar --spring.config.location=application.yml
+----------------------------------------------------------------------------------------------------
