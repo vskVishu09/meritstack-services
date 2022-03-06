@@ -28,7 +28,7 @@ public class OTPEventListener implements ApplicationListener<OTPEvent> {
 
         String recipientAddress = user.getEmail();
         String subject = "Meritstack: Reset Password";
-        Long otp = verificationOTP.getOtp();
+        String otp = verificationOTP.getOtp();
         String message = "Reset your password using OTP: " + otp;
         String from = "support.merit@gmail.com";
         String signature = "Thanks & Regards, \n Team Meritstack.";

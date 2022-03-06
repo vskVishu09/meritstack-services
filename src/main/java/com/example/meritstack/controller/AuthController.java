@@ -67,7 +67,7 @@ public class AuthController {
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
         UserPrincipal userPrincipal = (UserPrincipal) authentication.getPrincipal();
-        if (!loginRequest.getType().equals(userPrincipal.getUserType())) {
+        if (!loginRequest.getType().equalsIgnoreCase(userPrincipal.getUserType())) {
             throw new BadRequestException("Bad credentials");
         }
 

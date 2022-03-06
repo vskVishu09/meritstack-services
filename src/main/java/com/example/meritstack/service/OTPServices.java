@@ -17,7 +17,7 @@ public class OTPServices {
     @Autowired
     VerificationOTPRepository otpRepository;
 
-    public void validateOTP(String email, Long otp) {
+    public void validateOTP(String email, String otp) {
 
         Optional<OTPProvider> verificationOTPOp = otpRepository.findByEmail(email);
         if(!verificationOTPOp.isPresent()) {

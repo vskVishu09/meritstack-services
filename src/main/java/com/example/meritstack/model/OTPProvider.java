@@ -30,13 +30,13 @@ public class OTPProvider {
 	@Id
 	private String email;
 
-	private Long otp;
+	private String otp;
 
 	private Date genratedAt;
 
 	private Date expireAt;
 
-	public OTPProvider(String email, Long otp) {
+	public OTPProvider(String email, String otp) {
 		this.email = email;
 		this.otp = otp;
 		calculateExpiryDate();

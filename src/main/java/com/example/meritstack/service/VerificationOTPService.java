@@ -17,9 +17,8 @@ public class VerificationOTPService {
 
 	public OTPProvider createOTP(String email) {
 		Random random = new Random();
-		String otp = String.format("%06d", random.nextInt(1000000));
-		Long otpLong = Long.valueOf(otp);
-		OTPProvider verificationOTP = new OTPProvider(email, otpLong);
+		String otp = String.format("%06d", random.nextInt(999999));
+		OTPProvider verificationOTP = new OTPProvider(email, otp);
 		verificationOTP = otpRepository.save(verificationOTP);
 		return verificationOTP;
 	}

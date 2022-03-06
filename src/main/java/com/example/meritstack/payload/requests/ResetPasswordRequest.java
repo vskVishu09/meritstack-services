@@ -1,8 +1,8 @@
 package com.example.meritstack.payload.requests;
 
 import lombok.Data;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
+
+import javax.validation.constraints.*;
 
 @Data
 public class ResetPasswordRequest {
@@ -17,8 +17,8 @@ public class ResetPasswordRequest {
     @NotBlank(message = "Confirm password should not be blank")
     private String confirmPassword;
 
-    @NotBlank(message = "OTP should not be blank")
-    private Long otp;
+    @Pattern(regexp="\\d{6}", message = "OTP should be 6 digit")
+    private String otp;
 
     @NotBlank(message = "Usertype should not be blank")
     private String userType;
