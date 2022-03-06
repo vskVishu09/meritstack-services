@@ -1,10 +1,101 @@
 {
 	"info": {
 		"_postman_id": "e948d394-d823-487c-a9c0-508559da225c",
-		"name": "MeritStack",
+		"name": "MeritStack-services",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "signup Company",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"vishu\",\r\n    \"lastName\": \"kore\",\r\n    \"companyName\" : \"RishbSoft\",\r\n    \"email\": \"vishukore09@gmail.com\",\r\n    \"password\": \"Vsk@1234\",\r\n    \"phone\": \"+91 8975313590\",\r\n    \"userType\" : \"Company\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/company/signup/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"company",
+								"signup",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "signup admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"vishu\",\r\n    \"lastName\": \"kore\",\r\n    \"email\": \"vishukore@gmail.com\",\r\n    \"password\": \"Vsk@1234\",\r\n    \"phone\": \"+91 8975313590\",\r\n    \"userType\" : \"Admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/admin/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"admin",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
 		{
 			"name": "Outh-google",
 			"request": {
@@ -152,7 +243,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"firstName\": \"Priyanka\",\r\n    \"lastName\": \"Kothawale\",\r\n    \"email\": \"priyanka.k.agcop@gmail.com\",\r\n    \"password\": \"p123\",\r\n    \"phone\": \"+91 8975313590\",\r\n    \"userType\" : \"Candidate\"\r\n}",
+					"raw": "{\r\n    \"firstName\": \"Priyanka\",\r\n    \"lastName\": \"Kothawale\",\r\n    \"email\": \"priyanka@gmail.com\",\r\n    \"password\": \"p123\",\r\n    \"phone\": \"+91 8975313590\",\r\n    \"userType\" : \"Candidate\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -230,7 +321,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"vishukore09@gmail.com\",\r\n    \"userType\" : \"Candidate\"\r\n}",
+					"raw": "{\r\n    \"email\": \"vishukore09@gmail.com\",\r\n    \"userType\" : \"Candidate\",\r\n    \"newPassword\" : \"p123\",\r\n    \"confirmPassword\" : \"p123\",\r\n    \"otp\" : \"274481\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -259,7 +350,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"vishukore09@gmail.com\",\r\n    \"password\": \"p123\",\r\n    \"type\" : \"Candidate\"\r\n}",
+					"raw": "{\r\n  \"email\": \"vishukore09@gmail.com\",\r\n  \"password\": \"Vsk@1234\",\r\n  \"type\": \"candidate\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

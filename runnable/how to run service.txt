@@ -1,4 +1,5 @@
 1. configured your database username/password in application.yml file.
+2. please delete all tables from DB.
 2. use below command to run service.
 
 ----------------------------------------------------------------------------------------------------
