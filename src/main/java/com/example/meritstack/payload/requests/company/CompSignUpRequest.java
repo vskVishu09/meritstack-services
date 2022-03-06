@@ -1,4 +1,4 @@
-package com.example.meritstack.payload.requests;
+package com.example.meritstack.payload.requests.company;
 
 import lombok.Data;
 
@@ -6,7 +6,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 @Data
-public class SignUpRequest {
+public class CompSignUpRequest {
     @NotBlank(message = "First name should not be blank")
     private String firstName;
 
@@ -26,4 +26,6 @@ public class SignUpRequest {
     @NotBlank(message = "Usertype should not be blank")
     private String userType;
 
+    @NotBlank(message = "company name should not be blank")
+    private String companyName;
 }

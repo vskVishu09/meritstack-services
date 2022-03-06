@@ -44,4 +44,6 @@ public class User {
     private String providerId;
 
     private String userType;
+
+    private String companyName;
 }
